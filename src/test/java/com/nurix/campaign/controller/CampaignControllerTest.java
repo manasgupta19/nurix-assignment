@@ -3,6 +3,7 @@ package com.nurix.campaign.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nurix.campaign.dto.request.CampaignRequest;
 import com.nurix.campaign.entity.Campaign;
+import com.nurix.campaign.exception.FileProcessingException;
 import com.nurix.campaign.service.CampaignService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,6 +82,21 @@ class CampaignControllerTest {
                 .file(csvFile))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.maxConcurrency").exists());
+    }
+
+    @Test
+    void shouldReturnStructuredErrorWhenCsvIsInvalid() throws Exception {
+        // Mock service to throw our new custom exception
+        when(campaignService.createCampaign(any(), any()))
+            .thenThrow(new FileProcessingException("Invalid CSV format"));
+
+        mockMvc.perform(multipart("/api/campaigns")
+                .file(new MockMultipartFile("file", "test.csv", "text/csv", "invalid".getBytes()))
+                .param("name", "Test"))
+            .andExpect(status().isBadRequest())
+            .andExpect(jsonPath("$.message").value("Invalid CSV format"))
+            .andExpect(jsonPath("$.error").value("Bad Request"))
+            .andExpect(jsonPath("$.timestamp").exists());
     }
 
     @Test

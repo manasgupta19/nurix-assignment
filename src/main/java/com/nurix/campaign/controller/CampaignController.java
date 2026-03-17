@@ -6,10 +6,11 @@ import com.nurix.campaign.entity.CallRecord;
 import com.nurix.campaign.entity.Campaign;
 import com.nurix.campaign.service.CampaignService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.Valid;
 
@@ -19,15 +20,14 @@ public class CampaignController {
 
     private final CampaignService campaignService;
 
-    @Autowired
     public CampaignController(CampaignService campaignService) {
         this.campaignService = campaignService;
     }
 
-    @PostMapping(consumes = org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<Campaign> createCampaign(
             @RequestPart("campaign") @Valid CampaignRequest request, // Campaign metadata as JSON
-            @RequestPart(value = "file", required = false) org.springframework.web.multipart.MultipartFile file) { // Optional CSV file
+            @RequestPart(value = "file", required = false) MultipartFile file) { // Optional CSV file
         
         Campaign campaign = campaignService.createCampaign(request, file);
         return ResponseEntity.status(HttpStatus.CREATED).body(campaign);

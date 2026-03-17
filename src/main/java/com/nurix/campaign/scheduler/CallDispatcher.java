@@ -121,28 +121,25 @@ public class CallDispatcher {
 
     private void handleCallOutcome(CallRecord record, CallStatus outcome) {
         if (outcome == CallStatus.COMPLETED) {
-            log.info("<<< [SUCCESS] Call to {} completed successfully.", record.getPhoneNumber());
             record.setStatus(CallStatus.COMPLETED);
-            successCounter.increment(); // Increment success counter
+            successCounter.increment();
         } else {
-            int currentRetries = record.getRetryCount();
-            int maxAllowed = record.getCampaign().getMaxRetries();
-
-            if (currentRetries < maxAllowed) {
-                long delay = record.getCampaign().getRetryDelaySeconds();
-                record.setRetryCount(currentRetries + 1);
-                record.setNextRetryAt(LocalDateTime.now().plusSeconds(delay));
-                record.setStatus(CallStatus.PENDING);
-                
-                log.warn("!!! [RETRY] Call to {} failed. Scheduled retry #{} in {}s", 
-                         record.getPhoneNumber(), record.getRetryCount(), delay);
-            } else {
-                log.error("XXX [FAILED] Max retries ({}) reached for {}. Marking as FAILED.", 
-                          maxAllowed, record.getPhoneNumber());
+            int maxRetries = record.getCampaign().getMaxRetries();
+            
+            // Logical Fix: If we've reached or exceeded max retries, move to FAILED
+            if (record.getRetryCount() >= maxRetries) {
                 record.setStatus(CallStatus.FAILED);
                 failureCounter.increment();
+                log.info(">>> [TERMINAL FAILURE] Phone: {} exhausted {} retries.", 
+                        record.getPhoneNumber(), maxRetries);
+            } else {
+                // Increment retry count and schedule next attempt
+                record.setRetryCount(record.getRetryCount() + 1);
+                record.setNextRetryAt(LocalDateTime.now().plusSeconds(
+                    record.getCampaign().getRetryDelaySeconds()));
+                record.setStatus(CallStatus.PENDING);
             }
         }
-        callRecordRepository.save(record);
+        callRecordRepository.saveAndFlush(record);
     }
 }

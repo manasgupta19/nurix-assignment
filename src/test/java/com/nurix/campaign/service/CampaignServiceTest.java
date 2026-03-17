@@ -2,6 +2,7 @@ package com.nurix.campaign.service;
 
 import com.nurix.campaign.dto.request.CampaignRequest;
 import com.nurix.campaign.entity.Campaign;
+import com.nurix.campaign.exception.FileProcessingException;
 import com.nurix.campaign.repository.CampaignRepository;
 import com.nurix.campaign.repository.CallRecordRepository;
 import com.nurix.campaign.service.impl.CampaignServiceImpl;
@@ -45,7 +46,7 @@ class CampaignServiceTest {
         MockMultipartFile csvFile = new MockMultipartFile(
                 "file", "test.csv", "text/csv", "9999988888".getBytes());
 
-        when(campaignRepository.save(any(Campaign.class))).thenAnswer(i -> i.getArguments()[0]);
+        when(campaignRepository.save(any(Campaign.class))).thenAnswer(i -> i.getArgument(0));
 
         // Act
         Campaign result = campaignService.createCampaign(request, csvFile);
@@ -56,5 +57,31 @@ class CampaignServiceTest {
         assertEquals(1, result.getCalls().size());
         assertEquals("9999988888", result.getCalls().get(0).getPhoneNumber());
         verify(campaignRepository, times(1)).save(any(Campaign.class));
+    }
+
+    @Test
+    void shouldDeduplicateNumbersAndIgnoreInvalidData() {
+        // Arrange: CSV with duplicates and invalid formats
+        String csvContent = "9999999999\n9999999999\n12345\nabcdefghij\n8888888888";
+        MockMultipartFile file = new MockMultipartFile("file", "test.csv", 
+                "text/csv", csvContent.getBytes());
+        
+        CampaignRequest request = new CampaignRequest();
+        request.setName("Dedupe Test");
+        
+        // Act
+        Campaign result = campaignService.createCampaign(request, file);
+
+        // Assert: 5 rows in CSV, but only 2 valid unique numbers
+        assertEquals(2, result.getCalls().size());
+    }
+
+    @Test
+    void shouldThrowExceptionWhenNoValidNumbersFound() {
+        MockMultipartFile file = new MockMultipartFile("file", "empty.csv", 
+                "text/csv", "invalid-data".getBytes());
+        
+        assertThrows(FileProcessingException.class, () -> 
+                campaignService.createCampaign(new CampaignRequest(), file));
     }
 }

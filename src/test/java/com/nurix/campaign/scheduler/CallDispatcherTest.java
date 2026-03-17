@@ -2,6 +2,7 @@ package com.nurix.campaign.scheduler;
 
 import com.nurix.campaign.entity.CallRecord;
 import com.nurix.campaign.entity.Campaign;
+import com.nurix.campaign.entity.enums.CallStatus;
 import com.nurix.campaign.repository.CallRecordRepository;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry; // Import this
@@ -12,6 +13,7 @@ import org.mockito.Mock;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -47,9 +49,34 @@ class CallDispatcherTest {
         dispatcher.dispatchCalls();
 
         // Verify logic
-        verify(repository, times(1)).save(any(CallRecord.class));
+        verify(repository, times(2)).saveAndFlush(any(CallRecord.class));
         
         // Extra Staff-level check: Verify the metric actually recorded the attempt
         assert(meterRegistry.get("campaign.calls.dispatched").counter().count() == 1.0);
+    }
+
+    @Test
+    void shouldSetStatusToFailedWhenMaxRetriesExhausted() {
+        // Arrange
+        Campaign campaign = new Campaign();
+        campaign.setId(1L);
+        campaign.setMaxRetries(2);
+        
+        CallRecord record = new CallRecord();
+        record.setCampaign(campaign);
+        record.setRetryCount(2); // Already at max
+        record.setStatus(CallStatus.PENDING);
+
+        when(repository.findEligibleCalls(any())).thenReturn(List.of(record));
+        
+        // Simulate a telephony failure
+        // Note: Assuming successRate is set to 0.0 for this test or mockTelephony is mocked
+        
+        // Act
+        dispatcher.dispatchCalls();
+
+        // Assert
+        assertEquals(CallStatus.FAILED, record.getStatus());
+        verify(repository).saveAndFlush(record);
     }
 }

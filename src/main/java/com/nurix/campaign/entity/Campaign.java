@@ -8,6 +8,7 @@ import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
 import java.time.DayOfWeek;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -33,8 +34,8 @@ public class Campaign {
     private List<BusinessWindow> businessHours;
 
     @JsonManagedReference
-    @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<CallRecord> calls;
+    @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    private List<CallRecord> calls = new ArrayList<>();;
 
     // --- MANUALLY IMPLEMENTED GETTERS ---
     public Long getId() { return id; }
