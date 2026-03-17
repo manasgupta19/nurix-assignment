@@ -1,3 +1,7 @@
+### 📖 Documentation
+* [Setup & Execution Guide](README.md)
+* [System Design & Architecture](DESIGN.md)
+
 # Outbound Voice Campaign Manager
 
 An enterprise-grade Spring Boot application designed to manage, schedule, and monitor outbound voice campaigns with high reliability, per-campaign concurrency limits, and intelligent retry mechanisms.
@@ -119,3 +123,5 @@ Run the full test suite to ensure system integrity:
   * **Unit Tests:** Validate business hour logic and mock telephony behavior.
 
 -----
+
+[View Design Documentation](DESIGN.md)
