@@ -35,6 +35,7 @@ class CallDispatcherTest {
     @Test
     void shouldRespectConcurrencyLimit() {
         Campaign campaign = new Campaign();
+        campaign.setId(1L);
         campaign.setMaxConcurrency(1);
         campaign.setBusinessHours(List.of());
 

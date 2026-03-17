@@ -96,13 +96,27 @@ public class CallDispatcher {
         record.setLastAttemptAt(LocalDateTime.now());
         callRecordRepository.saveAndFlush(record);
 
-        // Simulate Telephony Outcome
+        // FIX: Add simulated latency here before the outcome
+        simulateLatency(); 
+
         CallStatus outcome = mockTelephonyCall();
         handleCallOutcome(record, outcome);
     }
 
     private CallStatus mockTelephonyCall() {
-        return Math.random() < 0.7 ? CallStatus.COMPLETED : CallStatus.FAILED;
+        // FIX: Use the injected successRate instead of hardcoded 0.7
+        return Math.random() < this.successRate ? CallStatus.COMPLETED : CallStatus.FAILED;
+    }
+
+    // FIX: Add this method to utilize the maxLatency property
+    private void simulateLatency() {
+        if (this.maxLatency > 0) {
+            try {
+                Thread.sleep((long) (Math.random() * this.maxLatency));
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
     }
 
     private void handleCallOutcome(CallRecord record, CallStatus outcome) {
