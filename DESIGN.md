@@ -14,6 +14,8 @@ The system follows a **Modular Monolith** architecture with a clear separation b
 3.  **Background Dispatcher (Spring Scheduler):** A pull-based worker that polls for eligible calls, enforces concurrency limits, and manages the lifecycle of a call attempt.
 4.  **Observability Stack (Micrometer + Prometheus + Grafana):** Collects and visualizes operational metrics like success rates, thread health, and retry pressure.
 
+![System Architecture](images/HLD.png)
+
 ---
 
 ## 2. Low-Level Design (LLD)
@@ -23,6 +25,8 @@ The system follows a **Modular Monolith** architecture with a clear separation b
 * **CallRecord:** Represents an individual call attempt. Tracks `retryCount`, `lastAttemptAt`, and `nextRetryAt` for scheduling logic.
 * **Enums:** `CallStatus` (PENDING, IN_PROGRESS, COMPLETED, FAILED) and `CampaignStatus`.
 
+![Low Level Design](images/LLD.png)
+
 ### Core Logic: The Call Dispatcher
 The `CallDispatcher` is the "brain" of the system. It executes on a fixed-delay schedule and follows these steps:
 1.  **Fetch Eligible Records:** Queries `CallRecord` table for records where `status = PENDING` and `nextRetryAt <= now`.
@@ -30,6 +34,7 @@ The `CallDispatcher` is the "brain" of the system. It executes on a fixed-delay 
 3.  **Per-Campaign Concurrency:** Before dispatching, it checks the active count of `IN_PROGRESS` calls for that specific campaign ID.
 4.  **Business Hour Validation:** Converts system time to the campaign's `timezone` and checks against the defined `businessHours` windows.
 
+![call dispatcher sequence](images/call_dispatcher_sequence_diagram.png)
 ---
 
 ## 3. Design Decisions & Trade-offs
