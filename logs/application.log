@@ -459,3 +459,11 @@
 2026-03-17 23:25:47 [main] INFO  c.n.c.r.CallRecordRepositoryTest - Started CallRecordRepositoryTest in 0.798 seconds (process running for 26.396)
 2026-03-17 23:25:48 [main] INFO  c.n.c.scheduler.CallDispatcher - Found 2 eligible calls for dispatching.
 2026-03-17 23:25:48 [main] DEBUG c.n.c.util.BusinessHourValidator - Time 2026-03-17T10:00 is outside configured business hours.
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'Integration Test Campaign' (Limit: 5).
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9876543210
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9876543210 completed successfully.
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1234567890
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1234567890 completed successfully.
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 8888877777
+2026-03-17 17:55:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 8888877777 completed successfully.
