@@ -35,7 +35,7 @@ public class Campaign {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<CallRecord> calls = new ArrayList<>();;
+    private List<CallRecord> calls = new ArrayList<>();
 
     // --- MANUALLY IMPLEMENTED GETTERS ---
     public Long getId() { return id; }

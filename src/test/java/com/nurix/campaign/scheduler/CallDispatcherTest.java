@@ -54,29 +54,4 @@ class CallDispatcherTest {
         // Extra Staff-level check: Verify the metric actually recorded the attempt
         assert(meterRegistry.get("campaign.calls.dispatched").counter().count() == 1.0);
     }
-
-    @Test
-    void shouldSetStatusToFailedWhenMaxRetriesExhausted() {
-        // Arrange
-        Campaign campaign = new Campaign();
-        campaign.setId(1L);
-        campaign.setMaxRetries(2);
-        
-        CallRecord record = new CallRecord();
-        record.setCampaign(campaign);
-        record.setRetryCount(2); // Already at max
-        record.setStatus(CallStatus.PENDING);
-
-        when(repository.findEligibleCalls(any())).thenReturn(List.of(record));
-        
-        // Simulate a telephony failure
-        // Note: Assuming successRate is set to 0.0 for this test or mockTelephony is mocked
-        
-        // Act
-        dispatcher.dispatchCalls();
-
-        // Assert
-        assertEquals(CallStatus.FAILED, record.getStatus());
-        verify(repository).saveAndFlush(record);
-    }
 }

@@ -61,18 +61,21 @@ class CampaignServiceTest {
 
     @Test
     void shouldDeduplicateNumbersAndIgnoreInvalidData() {
-        // Arrange: CSV with duplicates and invalid formats
+        // Arrange
         String csvContent = "9999999999\n9999999999\n12345\nabcdefghij\n8888888888";
-        MockMultipartFile file = new MockMultipartFile("file", "test.csv", 
-                "text/csv", csvContent.getBytes());
+        MockMultipartFile file = new MockMultipartFile("file", "test.csv", "text/csv", csvContent.getBytes());
         
         CampaignRequest request = new CampaignRequest();
         request.setName("Dedupe Test");
+
+        // ADD THIS STUB:
+        when(campaignRepository.save(any(Campaign.class))).thenAnswer(i -> i.getArgument(0));
         
         // Act
         Campaign result = campaignService.createCampaign(request, file);
 
-        // Assert: 5 rows in CSV, but only 2 valid unique numbers
+        // Assert
+        assertNotNull(result); // Guard against null
         assertEquals(2, result.getCalls().size());
     }
 
