@@ -1,4 +1,0 @@
-2026-03-16 17:55:19 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 23460 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
-2026-03-16 17:55:19 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
-2026-03-16 17:55:19 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
-2026-03-16 17:55:28 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 10.309 seconds (process running for 11.496)

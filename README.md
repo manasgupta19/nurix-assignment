@@ -1,86 +1,121 @@
-# Outbound Voice Campaign Microservice
+# Outbound Voice Campaign Manager
 
-## Overview
-A production-quality microservice built with Spring Boot to manage and execute automated outbound voice campaigns. It features timezone-aware business hour scheduling, concurrency control, and automated retry logic.
+An enterprise-grade Spring Boot application designed to manage, schedule, and monitor outbound voice campaigns with high reliability, per-campaign concurrency limits, and intelligent retry mechanisms.
 
-## Tech Stack
-- **Java 21+** (Tested on Java 25 with Byte Buddy experimental flags)
-- **Spring Boot 3.x** (Web, Data JPA, Actuator)
-- **PostgreSQL** (Source of Truth)
-- **Prometheus & Grafana** (Observability)
-- **Docker & Docker Compose** (Infrastructure)
+-----
 
-## Setup Instructions
-1. **Start Infrastructure:**
-   ```bash
-   docker-compose up -d
-   ```
+## 🚀 Quick Start
 
-2. **Build and Run:**
-```bash
-./mvnw spring-boot:run
+### 1\. Prerequisites
 
-```
+  * **Java 17** (or higher)
+  * **Maven 3.8+**
+  * **Docker & Docker Compose** (for PostgreSQL, Prometheus, and Grafana)
 
+### 2\. Infrastructure Setup
 
-3. **Run Tests:**
-```bash
-./mvnw clean test
-
-```
-
-
-
-## Example API Usage
-
-### 1. Create a Campaign
+Spin up the required infrastructure (Database and Monitoring) using Docker:
 
 ```bash
-curl.exe -X POST http://localhost:8080/api/campaigns \
--H "Content-Type: application/json" \
--d '{
-  "name": "Morning Blast",
-  "maxConcurrency": 2,
-  "maxRetries": 2,
-  "retryDelaySeconds": 30,
-  "timeZone": "Asia/Kolkata",
-  "phoneNumbers": ["9876543210", "9123456789"],
-  "businessHours": [
-    {"dayOfWeek": "TUESDAY", "startTime": "09:00", "endTime": "18:00"}
-  ]
-}'
-
+docker-compose up -d
 ```
 
-### 2. Get Campaign Summary
+  * **PostgreSQL:** `localhost:5432` (user: `postgres`, pass: `postgres`)
+  * **Prometheus:** `localhost:9090`
+  * **Grafana:** `localhost:3000` (default login: `admin`/`admin`)
+
+### 3\. Run the Application
 
 ```bash
-curl -X GET http://localhost:8080/api/campaigns/1/summary
-
+./mvnw clean spring-boot:run
 ```
 
-## System Design Explanation
+The application will start on port `8080`. Access the **Swagger UI** at: [http://localhost:8080/swagger-ui/index.html](https://www.google.com/search?q=http://localhost:8080/swagger-ui/index.html)
 
-### Architecture
+-----
 
-The system utilizes a **Polling Consumer** pattern. A background `CallDispatcher` scans the database every 5 seconds for "Eligible" calls.
+## 🛠 Execution & Verification Scenarios
 
-* **Eligibility** is defined as: `Status = PENDING` AND (`nextRetryAt` is NULL OR in the past) AND (Current Time is within `BusinessHours`).
-* **Concurrency** is enforced at the campaign level by limiting the number of records picked in a single polling cycle.
+### Scenario 1: Bulk Campaign Creation via CSV
 
-### Fault Tolerance
+**Goal:** Verify that a campaign can be created with bulk numbers and specific business hours.
 
-By maintaining all state in **PostgreSQL**, the system ensures that no call is lost during a service restart. The use of **UTC Normalization** for all timestamps prevents "Time-Shift" bugs when running in distributed environments across different regions.
+1.  **Action:** Use the `POST /api/campaigns` endpoint.
+2.  **Request:**
+      * **Part `campaign` (JSON):**
+        ```json
+        {
+          "name": "Morning Promotional Drive",
+          "maxConcurrency": 5,
+          "maxRetries": 2,
+          "retryDelaySeconds": 10,
+          "timeZone": "Asia/Kolkata",
+          "businessHours": [
+            { "dayOfWeek": "MONDAY", "startTime": "09:00", "endTime": "18:00" },
+            { "dayOfWeek": "TUESDAY", "startTime": "09:00", "endTime": "18:00" }
+          ]
+        }
+        ```
+      * **Part `file` (CSV):** Upload a file with one phone number per line.
+3.  **Verification:**
+      * **API:** Expect a `201 Created` with a campaign ID and the list of associated call records.
+      * **DB Query:** `SELECT count(*) FROM call_records WHERE campaign_id = [ID];` should match CSV row count.
+      * **Dashboard:** Total Dispatched count in Grafana will increment when the scheduler picks up the records.
 
-### Observability
+### Scenario 2: Concurrency Enforcement
 
-Real-time metrics are exposed via `/actuator/prometheus`. Custom counters track `campaign.calls.dispatched` to monitor throughput and failure rates in Grafana.
+**Goal:** Prove the system respects `maxConcurrency` limits even when multiple campaigns are running.
 
----
+1.  **Action:** Create two campaigns:
+      * **Campaign A:** 50 numbers, `maxConcurrency: 1`
+      * **Campaign B:** 10 numbers, `maxConcurrency: 5`
+2.  **Verification:**
+      * **Logs:** You will see `Campaign B` finishing its calls much faster than `Campaign A`.
+      * **DB Query:** `SELECT campaign_id, status, count(*) FROM call_records GROUP BY campaign_id, status;`
+      * **Grafana:** The **"Hikari Active Connections"** graph will show a steady pool usage corresponding to the sum of active calls.
 
-### **Project Handover Checklist**
-1.  [x] **Logic:** Concurrency defaults and Retry priority updated.
-2.  [x] **Tests:** All integration and unit tests are green.
-3.  [x] **Monitoring:** Prometheus configuration and Grafana steps provided.
-4.  [x] **Logging:** Segregated logs for Hibernate, Spring, and App logic.
-5.  [x] **Documentation:** Comprehensive README with Design and Setup info.
+### Scenario 3: Fault Tolerance & Intelligent Retries
+
+**Goal:** Verify that failed calls are rescheduled based on the `retryDelaySeconds` and prioritized correctly.
+
+1.  **Setup:** In `application.properties`, set `campaign.telephony.success-rate=0.5`.
+2.  **Action:** Run a campaign.
+3.  **Verification:**
+      * **API:** Call `GET /api/campaigns/{id}`. Observe the `retryCount` incrementing for failed calls.
+      * **DB Query:** `SELECT phone_number, retry_count, next_retry_at FROM call_records WHERE status = 'PENDING' AND retry_count > 0;`
+      * **Grafana:** The **"Total Retries Attempted"** stat panel will spike, and **"Retry Pressure"** will show the delta between attempts and completions.
+
+### Scenario 4: Business Hour & Timezone Compliance
+
+**Goal:** Ensure calls are not triggered outside of the configured windows.
+
+1.  **Action:** Create a campaign with a `startTime` in the future relative to the provided `timeZone`.
+2.  **Verification:**
+      * **Logs:** The dispatcher will log: `Campaign 'X' is currently outside business hours. Skipping.`
+      * **DB Query:** `SELECT status FROM call_records WHERE campaign_id = [ID];` All records should remain `PENDING`.
+
+-----
+
+## 📊 Monitoring Dashboard
+
+Import the provided `Campaign Dashboard.json` into Grafana to view:
+
+  * **Overall Success Rate:** Percentage of total attempts resulting in completion.
+  * **Call Outcome Distribution:** Pie chart of terminal success vs. terminal failure.
+  * **Live Threads:** Monitoring the health of the background worker pool.
+  * **Retry Pressure:** The volume of calls currently in the retry loop.
+
+-----
+
+## 🧪 Testing
+
+Run the full test suite to ensure system integrity:
+
+```bash
+./mvnw test
+```
+
+  * **Integration Tests:** Verify Multipart file handling and DB persistence.
+  * **Unit Tests:** Validate business hour logic and mock telephony behavior.
+
+-----

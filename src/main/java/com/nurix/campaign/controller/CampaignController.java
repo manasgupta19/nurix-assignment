@@ -6,14 +6,10 @@ import com.nurix.campaign.entity.CallRecord;
 import com.nurix.campaign.entity.Campaign;
 import com.nurix.campaign.service.CampaignService;
 
-import io.swagger.v3.oas.annotations.Operation;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.Valid;
 
