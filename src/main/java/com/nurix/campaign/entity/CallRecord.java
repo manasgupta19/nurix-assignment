@@ -1,5 +1,6 @@
 package com.nurix.campaign.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.nurix.campaign.entity.enums.CallStatus;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -13,6 +14,7 @@ public class CallRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "campaign_id")
     private Campaign campaign;

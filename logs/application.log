@@ -1,4 +1,461 @@
-2026-03-16 17:55:19 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 23460 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
-2026-03-16 17:55:19 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
-2026-03-16 17:55:19 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
-2026-03-16 17:55:28 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 10.309 seconds (process running for 11.496)
+2026-03-17 07:43:49 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 24744 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 07:43:49 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 07:43:49 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 07:44:01 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 12.701 seconds (process running for 13.402)
+2026-03-17 08:19:30 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 11744 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 08:19:30 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 08:19:30 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 08:19:39 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 10.324 seconds (process running for 11.198)
+2026-03-17 08:25:16 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:21 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:31 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:36 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:41 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:46 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:51 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:25:56 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:01 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:06 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:11 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:16 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:21 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:31 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:36 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:41 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:46 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:51 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:26:56 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:01 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:06 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:11 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:16 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:27 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:52 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:27:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:28:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:28:07 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:12 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:27 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:52 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:28:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:29:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:29:07 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:29:12 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:29:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:29:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:29:27 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:29:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:29:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:29:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:29:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:29:52 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:29:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:08 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:13 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:18 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:23 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:28 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:38 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:43 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:48 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:53 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:30:58 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:08 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:13 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:18 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:23 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:28 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:38 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:43 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:48 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:53 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:31:58 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:08 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:14 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:19 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:24 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:29 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:34 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:39 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:44 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:32:54 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:33:15 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 11548 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 08:33:15 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 08:33:15 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 08:33:25 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 11.758 seconds (process running for 12.3)
+2026-03-17 08:33:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:33:31 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:33:36 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:33:41 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:33:46 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:33:51 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:33:56 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:01 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:06 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:11 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:16 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:21 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:31 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:36 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:41 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:46 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:51 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:34:56 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:01 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:06 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:11 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:16 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:21 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:31 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:36 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:41 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:52 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:35:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:36:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:36:07 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:36:12 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:36:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:36:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:36:27 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:36:42 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 19500 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 08:36:42 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 08:36:42 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 08:36:52 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 11.001 seconds (process running for 12.156)
+2026-03-17 08:36:52 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:41:38 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 19168 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 08:41:38 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 08:41:38 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 08:41:54 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 17.752 seconds (process running for 19.148)
+2026-03-17 08:41:54 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:41:59 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:04 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:09 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:14 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:19 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:24 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:29 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:34 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:39 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:45 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:50 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:42:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:00 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:10 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:15 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:20 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:25 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:30 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:35 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:40 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:45 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:43:50 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:44:12 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 24716 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 08:44:12 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 08:44:12 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 08:44:22 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 10.871 seconds (process running for 12.01)
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 9 eligible calls for dispatching.
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'Initial-Demo-Campaign' (Limit: 5).
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1234567890
+2026-03-17 08:44:22 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 1234567890 failed. Scheduled retry #1 in 10s
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9876543210
+2026-03-17 08:44:22 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9876543210 failed. Scheduled retry #1 in 10s
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 5556667777
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 5556667777 completed successfully.
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'init-demo-campaign' (Limit: 5).
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1234567890
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1234567890 completed successfully.
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9876543210
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9876543210 completed successfully.
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 5556667777
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 5556667777 completed successfully.
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'Happy-Path-Campaign' (Limit: 5).
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1234567890
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1234567890 completed successfully.
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9876543210
+2026-03-17 08:44:22 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9876543210 failed. Scheduled retry #1 in 10s
+2026-03-17 08:44:22 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 5556667777
+2026-03-17 08:44:23 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 5556667777 completed successfully.
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Initial-Demo-Campaign' (Limit: 5).
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 1234567890
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1234567890 completed successfully.
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9876543210
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9876543210 completed successfully.
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 1 calls for campaign 'Happy-Path-Campaign' (Limit: 5).
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9876543210
+2026-03-17 08:44:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9876543210 completed successfully.
+2026-03-17 08:48:59 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 08:48:59 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'Happy-Path-Campaign' (Limit: 5).
+2026-03-17 08:48:59 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9819810001
+2026-03-17 08:48:59 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9819810001 completed successfully.
+2026-03-17 08:49:00 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9819810002
+2026-03-17 08:49:00 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9819810002 failed. Scheduled retry #1 in 10s
+2026-03-17 08:49:00 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9819810003
+2026-03-17 08:49:00 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9819810003 failed. Scheduled retry #1 in 10s
+2026-03-17 08:49:10 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 2 eligible calls for dispatching.
+2026-03-17 08:49:10 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Happy-Path-Campaign' (Limit: 5).
+2026-03-17 08:49:10 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9819810002
+2026-03-17 08:49:10 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9819810002 completed successfully.
+2026-03-17 08:49:10 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9819810003
+2026-03-17 08:49:10 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9819810003 completed successfully.
+2026-03-17 08:52:41 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 16244 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 08:52:41 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 08:52:41 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 08:52:51 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 10.451 seconds (process running for 11.439)
+2026-03-17 08:54:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 10 eligible calls for dispatching.
+2026-03-17 08:54:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Concurrency-Test-Campaign' (Limit: 2).
+2026-03-17 08:54:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1001
+2026-03-17 08:54:26 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1001 completed successfully.
+2026-03-17 08:54:27 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1002
+2026-03-17 08:54:27 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1002 completed successfully.
+2026-03-17 08:54:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 8 eligible calls for dispatching.
+2026-03-17 08:54:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Concurrency-Test-Campaign' (Limit: 2).
+2026-03-17 08:54:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1003
+2026-03-17 08:54:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1003 completed successfully.
+2026-03-17 08:54:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1004
+2026-03-17 08:54:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1004 completed successfully.
+2026-03-17 08:54:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 6 eligible calls for dispatching.
+2026-03-17 08:54:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Concurrency-Test-Campaign' (Limit: 2).
+2026-03-17 08:54:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1005
+2026-03-17 08:54:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1005 completed successfully.
+2026-03-17 08:54:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1006
+2026-03-17 08:54:37 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 1006 failed. Scheduled retry #1 in 60s
+2026-03-17 08:54:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 4 eligible calls for dispatching.
+2026-03-17 08:54:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Concurrency-Test-Campaign' (Limit: 2).
+2026-03-17 08:54:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1007
+2026-03-17 08:54:42 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 1007 failed. Scheduled retry #1 in 60s
+2026-03-17 08:54:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1008
+2026-03-17 08:54:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1008 completed successfully.
+2026-03-17 08:54:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 2 eligible calls for dispatching.
+2026-03-17 08:54:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Concurrency-Test-Campaign' (Limit: 2).
+2026-03-17 08:54:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1009
+2026-03-17 08:54:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1009 completed successfully.
+2026-03-17 08:54:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1010
+2026-03-17 08:54:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1010 completed successfully.
+2026-03-17 08:55:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 1 eligible calls for dispatching.
+2026-03-17 08:55:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 1 calls for campaign 'Concurrency-Test-Campaign' (Limit: 2).
+2026-03-17 08:55:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 1006
+2026-03-17 08:55:37 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1006 completed successfully.
+2026-03-17 08:55:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 1 eligible calls for dispatching.
+2026-03-17 08:55:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 1 calls for campaign 'Concurrency-Test-Campaign' (Limit: 2).
+2026-03-17 08:55:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 1007
+2026-03-17 08:55:42 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1007 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 15 eligible calls for dispatching.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 10 calls for campaign 'Failure-Resiliency-Test' (Limit: 10).
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9001
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9001 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9002
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9002 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9003
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9003 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9004
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9004 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9005
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9005 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9006
+2026-03-17 09:13:57 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9006 failed. Scheduled retry #1 in 15s
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9007
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9007 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9008
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9008 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9009
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9009 completed successfully.
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9010
+2026-03-17 09:13:57 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9010 completed successfully.
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 5 eligible calls for dispatching.
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 5 calls for campaign 'Failure-Resiliency-Test' (Limit: 10).
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9011
+2026-03-17 09:14:02 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9011 failed. Scheduled retry #1 in 15s
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9012
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9012 completed successfully.
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9013
+2026-03-17 09:14:02 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9013 failed. Scheduled retry #1 in 15s
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9014
+2026-03-17 09:14:02 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9014 failed. Scheduled retry #1 in 15s
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9015
+2026-03-17 09:14:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9015 completed successfully.
+2026-03-17 09:14:12 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 1 eligible calls for dispatching.
+2026-03-17 09:14:12 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 1 calls for campaign 'Failure-Resiliency-Test' (Limit: 10).
+2026-03-17 09:14:12 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9006
+2026-03-17 09:14:12 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9006 completed successfully.
+2026-03-17 09:14:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 09:14:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'Failure-Resiliency-Test' (Limit: 10).
+2026-03-17 09:14:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9011
+2026-03-17 09:14:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9011 completed successfully.
+2026-03-17 09:14:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9013
+2026-03-17 09:14:17 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9013 failed. Scheduled retry #2 in 15s
+2026-03-17 09:14:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9014
+2026-03-17 09:14:17 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9014 completed successfully.
+2026-03-17 09:14:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 1 eligible calls for dispatching.
+2026-03-17 09:14:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 1 calls for campaign 'Failure-Resiliency-Test' (Limit: 10).
+2026-03-17 09:14:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 3 for phone: 9013
+2026-03-17 09:14:32 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9013 failed. Scheduled retry #3 in 15s
+2026-03-17 09:14:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 1 eligible calls for dispatching.
+2026-03-17 09:14:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 1 calls for campaign 'Failure-Resiliency-Test' (Limit: 10).
+2026-03-17 09:14:47 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 4 for phone: 9013
+2026-03-17 09:14:47 [scheduling-1] ERROR c.n.c.scheduler.CallDispatcher - XXX [FAILED] Max retries (3) reached for 9013. Marking as FAILED.
+2026-03-17 09:21:34 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 17400 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 09:21:34 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 09:21:34 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 09:21:43 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 9.912 seconds (process running for 10.492)
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 15 eligible calls for dispatching.
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 10 calls for campaign 'Resiliency-Scenario-Reapply' (Limit: 10).
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9001
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9001 completed successfully.
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9002
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9002 completed successfully.
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9003
+2026-03-17 09:25:49 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9003 failed. Scheduled retry #1 in 15s
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9004
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9004 completed successfully.
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9005
+2026-03-17 09:25:49 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9005 failed. Scheduled retry #1 in 15s
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9006
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9006 completed successfully.
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9007
+2026-03-17 09:25:49 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9007 failed. Scheduled retry #1 in 15s
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9008
+2026-03-17 09:25:49 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 9008 failed. Scheduled retry #1 in 15s
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9009
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9009 completed successfully.
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9010
+2026-03-17 09:25:49 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9010 completed successfully.
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 5 eligible calls for dispatching.
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 5 calls for campaign 'Resiliency-Scenario-Reapply' (Limit: 10).
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9011
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9011 completed successfully.
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9012
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9012 completed successfully.
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9013
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9013 completed successfully.
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9014
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9014 completed successfully.
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9015
+2026-03-17 09:25:55 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9015 completed successfully.
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 4 eligible calls for dispatching.
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 4 calls for campaign 'Resiliency-Scenario-Reapply' (Limit: 10).
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9003
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9003 completed successfully.
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9005
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9005 completed successfully.
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9007
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9007 completed successfully.
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 9008
+2026-03-17 09:26:05 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9008 completed successfully.
+2026-03-17 12:58:35 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 21564 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 12:58:35 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 12:58:35 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 13:03:14 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 17260 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 13:03:14 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 13:03:14 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 13:03:24 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 11.04 seconds (process running for 11.628)
+2026-03-17 16:20:10 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 20332 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 16:20:10 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 16:20:10 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 17:13:23 [main] INFO  c.nurix.campaign.CampaignApplication - Starting CampaignApplication using Java 25.0.2 with PID 14524 (C:\Users\naiti\Documents\nurix-assignment\target\classes started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 17:13:23 [main] DEBUG c.nurix.campaign.CampaignApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 17:13:23 [main] INFO  c.nurix.campaign.CampaignApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 17:13:32 [main] INFO  c.nurix.campaign.CampaignApplication - Started CampaignApplication in 9.199 seconds (process running for 10.162)
+2026-03-17 22:44:13 [main] INFO  c.n.c.CampaignServiceApplicationTests - Starting CampaignServiceApplicationTests using Java 25.0.2 with PID 19176 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 22:44:13 [main] DEBUG c.n.c.CampaignServiceApplicationTests - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 22:44:13 [main] INFO  c.n.c.CampaignServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 22:44:24 [main] INFO  c.n.c.CampaignServiceApplicationTests - Started CampaignServiceApplicationTests in 11.57 seconds (process running for 13.495)
+2026-03-17 22:44:26 [main] INFO  c.n.c.c.CampaignControllerTest - Starting CampaignControllerTest using Java 25.0.2 with PID 19176 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 22:44:26 [main] DEBUG c.n.c.c.CampaignControllerTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 22:44:26 [main] INFO  c.n.c.c.CampaignControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 22:44:27 [main] INFO  c.n.c.c.CampaignControllerTest - Started CampaignControllerTest in 0.986 seconds (process running for 16.011)
+2026-03-17 22:44:27 [main] INFO  c.n.c.i.CampaignIntegrationTest - Starting CampaignIntegrationTest using Java 25.0.2 with PID 19176 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 22:44:27 [main] DEBUG c.n.c.i.CampaignIntegrationTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 22:44:27 [main] INFO  c.n.c.i.CampaignIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 22:44:31 [main] INFO  c.n.c.i.CampaignIntegrationTest - Started CampaignIntegrationTest in 3.911 seconds (process running for 20.646)
+2026-03-17 22:44:32 [main] INFO  c.n.c.r.CallRecordRepositoryTest - Starting CallRecordRepositoryTest using Java 25.0.2 with PID 19176 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 22:44:32 [main] DEBUG c.n.c.r.CallRecordRepositoryTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 22:44:32 [main] INFO  c.n.c.r.CallRecordRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 17:14:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 17:14:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'Integration Test Campaign' (Limit: 5).
+2026-03-17 17:14:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9876543210
+2026-03-17 22:44:33 [main] INFO  c.n.c.r.CallRecordRepositoryTest - Started CallRecordRepositoryTest in 1.293 seconds (process running for 22.261)
+2026-03-17 17:14:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9876543210 completed successfully.
+2026-03-17 17:14:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1234567890
+2026-03-17 17:14:33 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 1234567890 failed. Scheduled retry #1 in 30s
+2026-03-17 17:14:33 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 8888877777
+2026-03-17 17:14:33 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 8888877777 failed. Scheduled retry #1 in 30s
+2026-03-17 22:44:33 [main] INFO  c.n.c.scheduler.CallDispatcher - Found 2 eligible calls for dispatching.
+2026-03-17 22:44:33 [main] DEBUG c.n.c.util.BusinessHourValidator - Time 2026-03-17T10:00 is outside configured business hours.
+2026-03-17 17:15:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 2 eligible calls for dispatching.
+2026-03-17 17:15:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 2 calls for campaign 'Integration Test Campaign' (Limit: 5).
+2026-03-17 17:15:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 1234567890
+2026-03-17 17:15:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1234567890 completed successfully.
+2026-03-17 17:15:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 8888877777
+2026-03-17 17:15:03 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 8888877777 completed successfully.
+2026-03-17 23:17:35 [main] INFO  c.n.c.CampaignServiceApplicationTests - Starting CampaignServiceApplicationTests using Java 25.0.2 with PID 22000 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:17:35 [main] DEBUG c.n.c.CampaignServiceApplicationTests - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:17:35 [main] INFO  c.n.c.CampaignServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 23:17:51 [main] INFO  c.n.c.CampaignServiceApplicationTests - Started CampaignServiceApplicationTests in 16.995 seconds (process running for 20.889)
+2026-03-17 23:17:53 [main] INFO  c.n.c.c.CampaignControllerTest - Starting CampaignControllerTest using Java 25.0.2 with PID 22000 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:17:53 [main] DEBUG c.n.c.c.CampaignControllerTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:17:53 [main] INFO  c.n.c.c.CampaignControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 23:17:53 [main] INFO  c.n.c.c.CampaignControllerTest - Started CampaignControllerTest in 0.655 seconds (process running for 23.147)
+2026-03-17 23:17:54 [main] INFO  c.n.c.i.CampaignIntegrationTest - Starting CampaignIntegrationTest using Java 25.0.2 with PID 22000 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:17:54 [main] DEBUG c.n.c.i.CampaignIntegrationTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:17:54 [main] INFO  c.n.c.i.CampaignIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 23:17:57 [main] INFO  c.n.c.i.CampaignIntegrationTest - Started CampaignIntegrationTest in 2.81 seconds (process running for 26.604)
+2026-03-17 23:17:57 [main] INFO  c.n.c.r.CallRecordRepositoryTest - Starting CallRecordRepositoryTest using Java 25.0.2 with PID 22000 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:17:57 [main] DEBUG c.n.c.r.CallRecordRepositoryTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:17:57 [main] INFO  c.n.c.r.CallRecordRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 23:17:59 [main] INFO  c.n.c.r.CallRecordRepositoryTest - Started CallRecordRepositoryTest in 1.313 seconds (process running for 28.199)
+2026-03-17 23:17:59 [main] INFO  c.n.c.scheduler.CallDispatcher - Found 2 eligible calls for dispatching.
+2026-03-17 23:17:59 [main] DEBUG c.n.c.util.BusinessHourValidator - Time 2026-03-17T10:00 is outside configured business hours.
+2026-03-17 17:48:01 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 3 eligible calls for dispatching.
+2026-03-17 17:48:01 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 3 calls for campaign 'Integration Test Campaign' (Limit: 5).
+2026-03-17 17:48:01 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 9876543210
+2026-03-17 17:48:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 9876543210 completed successfully.
+2026-03-17 17:48:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 1234567890
+2026-03-17 17:48:02 [scheduling-1] WARN  c.n.c.scheduler.CallDispatcher - !!! [RETRY] Call to 1234567890 failed. Scheduled retry #1 in 30s
+2026-03-17 17:48:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 1 for phone: 8888877777
+2026-03-17 17:48:02 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 8888877777 completed successfully.
+2026-03-17 17:48:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Found 1 eligible calls for dispatching.
+2026-03-17 17:48:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - Dispatching 1 calls for campaign 'Integration Test Campaign' (Limit: 5).
+2026-03-17 17:48:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - >>> [DISPATCH] Attempt 2 for phone: 1234567890
+2026-03-17 17:48:32 [scheduling-1] INFO  c.n.c.scheduler.CallDispatcher - <<< [SUCCESS] Call to 1234567890 completed successfully.
+2026-03-17 23:25:25 [main] INFO  c.n.c.CampaignServiceApplicationTests - Starting CampaignServiceApplicationTests using Java 25.0.2 with PID 68 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:25:25 [main] DEBUG c.n.c.CampaignServiceApplicationTests - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:25:25 [main] INFO  c.n.c.CampaignServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 23:25:40 [main] INFO  c.n.c.CampaignServiceApplicationTests - Started CampaignServiceApplicationTests in 16.14 seconds (process running for 19.394)
+2026-03-17 23:25:42 [main] INFO  c.n.c.c.CampaignControllerTest - Starting CampaignControllerTest using Java 25.0.2 with PID 68 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:25:42 [main] DEBUG c.n.c.c.CampaignControllerTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:25:42 [main] INFO  c.n.c.c.CampaignControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 23:25:42 [main] INFO  c.n.c.c.CampaignControllerTest - Started CampaignControllerTest in 0.613 seconds (process running for 21.299)
+2026-03-17 23:25:43 [main] INFO  c.n.c.i.CampaignIntegrationTest - Starting CampaignIntegrationTest using Java 25.0.2 with PID 68 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:25:43 [main] DEBUG c.n.c.i.CampaignIntegrationTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:25:43 [main] INFO  c.n.c.i.CampaignIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-17 23:25:46 [main] INFO  c.n.c.i.CampaignIntegrationTest - Started CampaignIntegrationTest in 3.451 seconds (process running for 25.25)
+2026-03-17 23:25:47 [main] INFO  c.n.c.r.CallRecordRepositoryTest - Starting CallRecordRepositoryTest using Java 25.0.2 with PID 68 (started by naiti in C:\Users\naiti\Documents\nurix-assignment)
+2026-03-17 23:25:47 [main] DEBUG c.n.c.r.CallRecordRepositoryTest - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-17 23:25:47 [main] INFO  c.n.c.r.CallRecordRepositoryTest - The following 1 profile is active: "test"
+2026-03-17 23:25:47 [main] INFO  c.n.c.r.CallRecordRepositoryTest - Started CallRecordRepositoryTest in 0.798 seconds (process running for 26.396)
+2026-03-17 23:25:48 [main] INFO  c.n.c.scheduler.CallDispatcher - Found 2 eligible calls for dispatching.
+2026-03-17 23:25:48 [main] DEBUG c.n.c.util.BusinessHourValidator - Time 2026-03-17T10:00 is outside configured business hours.

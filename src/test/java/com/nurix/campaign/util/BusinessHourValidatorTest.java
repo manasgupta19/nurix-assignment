@@ -1,49 +1,49 @@
 package com.nurix.campaign.util;
 
-import com.nurix.campaign.entity.Campaign;
-import org.junit.jupiter.api.Test;
+import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
+
+import com.nurix.campaign.entity.Campaign;
 
 class BusinessHourValidatorTest {
 
     @Test
-    void shouldReturnTrueWhenNoBusinessHoursDefined() {
-        Campaign campaign = new Campaign();
-        campaign.setBusinessHours(null);
-        assertTrue(BusinessHourValidator.isWithinBusinessHours(campaign, LocalDateTime.now()));
-    }
-
-    @Test
-    void shouldReturnFalseWhenOutsideBusinessHours() {
-        Campaign campaign = new Campaign();
-        campaign.setTimeZone("UTC");
-        
+    void isWithinHours_shouldAllowValidTimeOnCorrectDay() {
+        // Arrange
         Campaign.BusinessWindow window = new Campaign.BusinessWindow();
-        window.setDayOfWeek("MONDAY");
+        window.setDayOfWeek(DayOfWeek.TUESDAY);
         window.setStartTime("09:00");
         window.setEndTime("17:00");
-        campaign.setBusinessHours(List.of(window));
 
-        // Test a Monday at 6:00 PM (18:00) -> Should be False
-        LocalDateTime evening = LocalDateTime.of(2026, 3, 16, 18, 0); 
-        assertFalse(BusinessHourValidator.isWithinBusinessHours(campaign, evening));
+        // Today is Tuesday, March 17, 2026 (per system context)
+        LocalDateTime validTime = LocalDateTime.of(2026, 3, 17, 10, 0);
+
+        // Act
+        boolean result = BusinessHourValidator.isWithinHours(validTime, List.of(window));
+
+        // Assert
+        assertTrue(result, "Should be within business hours on a Tuesday morning");
     }
 
     @Test
-    void shouldHandleTimezoneConversionCorrectly() {
-        Campaign campaign = new Campaign();
-        campaign.setTimeZone("Asia/Kolkata"); // IST is UTC+5:30
-        
+    void isWithinHours_shouldDenyTimeOnWrongDay() {
+        // Arrange
         Campaign.BusinessWindow window = new Campaign.BusinessWindow();
-        window.setDayOfWeek("MONDAY");
-        window.setStartTime("10:00");
-        window.setEndTime("11:00");
-        campaign.setBusinessHours(List.of(window));
+        window.setDayOfWeek(DayOfWeek.SUNDAY);
+        window.setStartTime("09:00");
+        window.setEndTime("17:00");
 
-        // UTC Time is 05:00 AM Monday -> In Kolkata it is 10:30 AM Monday
-        LocalDateTime utcNow = LocalDateTime.of(2026, 3, 16, 5, 0);
-        assertTrue(BusinessHourValidator.isWithinBusinessHours(campaign, utcNow));
+        LocalDateTime tuesdayTime = LocalDateTime.of(2026, 3, 17, 10, 0);
+
+        // Act
+        boolean result = BusinessHourValidator.isWithinHours(tuesdayTime, List.of(window));
+
+        // Assert
+        assertFalse(result, "Tuesday should not be allowed if only Sunday is configured");
     }
 }

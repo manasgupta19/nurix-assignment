@@ -3,38 +3,58 @@ package com.nurix.campaign.service;
 import com.nurix.campaign.dto.request.CampaignRequest;
 import com.nurix.campaign.entity.Campaign;
 import com.nurix.campaign.repository.CampaignRepository;
+import com.nurix.campaign.repository.CallRecordRepository;
 import com.nurix.campaign.service.impl.CampaignServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import java.util.List;
+import org.mockito.MockitoAnnotations;
+import org.springframework.mock.web.MockMultipartFile;
+
+import java.util.Collections;
+
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(MockitoExtension.class)
 class CampaignServiceTest {
+
+    private CampaignService campaignService;
 
     @Mock
     private CampaignRepository campaignRepository;
 
-    @InjectMocks
-    private CampaignServiceImpl campaignService;
+    @Mock
+    private CallRecordRepository callRecordRepository;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+        campaignService = new CampaignServiceImpl(campaignRepository, callRecordRepository);
+    }
 
     @Test
-    void shouldCreateCampaignWithChildRecords() {
+    void createCampaign_shouldProperlyMapRequestAndFile() {
+        // Arrange
         CampaignRequest request = new CampaignRequest();
-        request.setName("Test Campaign");
-        request.setPhoneNumbers(List.of("123", "456"));
+        request.setName("Service Test");
+        request.setMaxConcurrency(10);
+        request.setTimeZone("IST");
+        request.setBusinessHours(Collections.emptyList());
+
+        MockMultipartFile csvFile = new MockMultipartFile(
+                "file", "test.csv", "text/csv", "9999988888".getBytes());
 
         when(campaignRepository.save(any(Campaign.class))).thenAnswer(i -> i.getArguments()[0]);
 
-        Campaign saved = campaignService.createCampaign(request);
+        // Act
+        Campaign result = campaignService.createCampaign(request, csvFile);
 
-        assertNotNull(saved);
-        assertEquals(2, saved.getCalls().size());
+        // Assert
+        assertNotNull(result);
+        assertEquals("Service Test", result.getName());
+        assertEquals(1, result.getCalls().size());
+        assertEquals("9999988888", result.getCalls().get(0).getPhoneNumber());
         verify(campaignRepository, times(1)).save(any(Campaign.class));
     }
 }

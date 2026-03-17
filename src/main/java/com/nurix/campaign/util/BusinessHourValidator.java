@@ -1,39 +1,51 @@
 package com.nurix.campaign.util;
 
 import com.nurix.campaign.entity.Campaign;
-import java.time.*;
+import com.nurix.campaign.scheduler.CallDispatcher;
 
+import lombok.extern.slf4j.Slf4j;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@Slf4j
 public class BusinessHourValidator {
 
-    public static boolean isWithinBusinessHours(Campaign campaign, LocalDateTime now) {
-        // If no restrictions, it's always allowed
-        if (campaign.getBusinessHours() == null || campaign.getBusinessHours().isEmpty()) {
+    private static final Logger log = LoggerFactory.getLogger(BusinessHourValidator.class);
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
+
+    /**
+     * Checks if a given time is within any of the provided business windows.
+     * If no windows are defined, the campaign is considered "Always Open".
+     */
+    public static boolean isWithinHours(LocalDateTime dateTime, List<Campaign.BusinessWindow> windows) {
+        // Requirement: If windows are empty, there are no restrictions.
+        if (windows == null || windows.isEmpty()) {
             return true;
         }
 
-        // Clean Fix: Default to UTC if the campaign timezone is missing or invalid
-        String campaignTz = (campaign.getTimeZone() == null) ? "UTC" : campaign.getTimeZone();
-        
-        try {
-            ZoneId campaignZone = ZoneId.of(campaignTz);
-            
-            // Normalize: Convert 'now' (UTC from DB) to the Campaign's local time
-            ZonedDateTime campaignTime = now.atZone(ZoneOffset.UTC)
-                                            .withZoneSameInstant(campaignZone);
-            
-            String currentDay = campaignTime.getDayOfWeek().name();
-            LocalTime currentTime = campaignTime.toLocalTime();
+        java.time.DayOfWeek currentDay = dateTime.getDayOfWeek();
+        LocalTime currentTime = dateTime.toLocalTime();
 
-            return campaign.getBusinessHours().stream()
-                    .filter(w -> w.getDayOfWeek().equalsIgnoreCase(currentDay))
-                    .anyMatch(w -> {
-                        LocalTime start = LocalTime.parse(w.getStartTime());
-                        LocalTime end = LocalTime.parse(w.getEndTime());
-                        return !currentTime.isBefore(start) && !currentTime.isAfter(end);
-                    });
-        } catch (DateTimeException e) {
-            // Log error and fallback: safer to not call if timezone is corrupted
-            return false;
+        for (Campaign.BusinessWindow window : windows) {
+            // 1. Check if the day matches
+            if (window.getDayOfWeek() == currentDay) {
+                LocalTime start = LocalTime.parse(window.getStartTime(), TIME_FORMATTER);
+                LocalTime end = LocalTime.parse(window.getEndTime(), TIME_FORMATTER);
+
+                // 2. Check if the current time is within [start, end]
+                // We use !isBefore and !isAfter to include the boundary minutes
+                if (!currentTime.isBefore(start) && !currentTime.isAfter(end)) {
+                    return true;
+                }
+            }
         }
+
+        log.debug("Time {} is outside configured business hours.", dateTime);
+        return false;
     }
 }

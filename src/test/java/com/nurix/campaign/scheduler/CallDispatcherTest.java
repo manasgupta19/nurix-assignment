@@ -7,18 +7,24 @@ import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry; // Import this
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Mock;
+
 import java.util.List;
+
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 class CallDispatcherTest {
 
+    @Mock
     private CallRecordRepository repository;
     private MeterRegistry meterRegistry;
     private CallDispatcher dispatcher;
 
     @BeforeEach
     void setUp() {
-        repository = mock(CallRecordRepository.class);
+        MockitoAnnotations.openMocks(this);
         // Use a real SimpleMeterRegistry instead of a mock
         meterRegistry = new SimpleMeterRegistry(); 
         

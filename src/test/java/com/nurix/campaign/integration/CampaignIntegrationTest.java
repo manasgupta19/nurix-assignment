@@ -1,58 +1,72 @@
 package com.nurix.campaign.integration;
 
 import com.nurix.campaign.dto.request.CampaignRequest;
-import com.nurix.campaign.repository.CampaignRepository;
-import com.nurix.campaign.repository.CallRecordRepository;
-
-import org.junit.jupiter.api.BeforeEach;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.List;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.springframework.transaction.annotation.Transactional;
-
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Transactional
-class CampaignIntegrationTest {
-
-    @Autowired
-    private TestRestTemplate restTemplate;
+@SpringBootTest
+@AutoConfigureMockMvc
+public class CampaignIntegrationTest {
 
     @Autowired
-    private CampaignRepository campaignRepository;
+    private MockMvc mockMvc;
 
     @Autowired
-    private CallRecordRepository callRecordRepository;
+    private ObjectMapper objectMapper;
 
-    @BeforeEach
-    void setUp() {
-        // Explicitly clear the database before every test run
-        // Delete child records first to avoid foreign key violations
-        callRecordRepository.deleteAll();
-        campaignRepository.deleteAll();
+    @Test
+    void createCampaign_withValidMultipartData_shouldReturnCreated() throws Exception {
+        // 1. Prepare Campaign Metadata
+        CampaignRequest request = new CampaignRequest();
+        request.setName("Integration Test Campaign");
+        request.setMaxConcurrency(5);
+        request.setMaxRetries(2);
+        request.setRetryDelaySeconds(30);
+        request.setTimeZone("UTC");
+        request.setBusinessHours(java.util.Collections.emptyList());
+
+        String jsonMetadata = objectMapper.writeValueAsString(request);
+        MockMultipartFile campaignPart = new MockMultipartFile(
+                "campaign", "", "application/json", jsonMetadata.getBytes());
+
+        // 2. Prepare CSV File
+        String csvContent = "9876543210\n8888877777\n1234567890";
+        MockMultipartFile csvFile = new MockMultipartFile(
+                "file", "numbers.csv", "text/csv", csvContent.getBytes());
+
+        // 3. Execute Multipart Request
+        mockMvc.perform(multipart("/api/campaigns")
+                .file(campaignPart)
+                .file(csvFile))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.name").value("Integration Test Campaign"))
+                .andExpect(jsonPath("$.calls.length()").value(3));
     }
 
     @Test
-    void shouldCreateCampaignAndCallRecords() {
-        CampaignRequest request = new CampaignRequest();
-        request.setName("Integration Test Campaign");
-        request.setPhoneNumbers(List.of("111", "222"));
-        request.setMaxConcurrency(1);
+    void createCampaign_withInvalidMetadata_shouldReturnBadRequest() throws Exception {
+        CampaignRequest invalidRequest = new CampaignRequest();
+        invalidRequest.setMaxRetries(10); // Violates @Max(5)
 
-        ResponseEntity<String> response = restTemplate.postForEntity("/api/campaigns", request, String.class);
+        MockMultipartFile campaignPart = new MockMultipartFile(
+                "campaign", "", "application/json", objectMapper.writeValueAsString(invalidRequest).getBytes());
         
-        // Assertions
-        assertEquals(201, response.getStatusCode().value());
-        
-        // Now the count will always be exactly 1
-        assertEquals(1, campaignRepository.count(), "Database should contain exactly one campaign");
-        
-        var savedCampaign = campaignRepository.findAll().get(0);
-        assertEquals(2, savedCampaign.getCalls().size(), "Campaign should have exactly two call records");
+        MockMultipartFile emptyFile = new MockMultipartFile(
+                "file", "test.csv", "text/csv", "".getBytes());
+
+        mockMvc.perform(multipart("/api/campaigns")
+                .file(campaignPart)
+                .file(emptyFile))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.maxRetries").exists());
     }
 }

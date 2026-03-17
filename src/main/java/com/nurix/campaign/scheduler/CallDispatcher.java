@@ -8,6 +8,7 @@ import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -23,11 +24,28 @@ public class CallDispatcher {
 
     private final CallRecordRepository callRecordRepository;
     private final Counter callAttemptsCounter;
+    private final Counter successCounter;
+    private final Counter failureCounter;
+
+    @Value("${campaign.telephony.success-rate:0.7}")
+    private double successRate;
+
+    @Value("${campaign.telephony.max-latency-ms:500}")
+    private long maxLatency;
+
+    // Use these variables in your mockTelephonyCall method
 
     public CallDispatcher(CallRecordRepository repository, MeterRegistry registry) {
         this.callRecordRepository = repository;
         this.callAttemptsCounter = Counter.builder("campaign.calls.dispatched")
                 .description("Total number of calls attempted")
+                .register(registry);
+        this.successCounter = Counter.builder("campaign.calls.completed")
+                .description("Total number of successful calls")
+                .register(registry);
+
+        this.failureCounter = Counter.builder("campaign.calls.failed")
+                .description("Total number of terminal call failures")
                 .register(registry);
     }
 
@@ -50,7 +68,7 @@ public class CallDispatcher {
             var campaign = records.get(0).getCampaign();
 
             // 1. Business Hour Validation
-            if (!BusinessHourValidator.isWithinBusinessHours(campaign, now)) {
+            if (!BusinessHourValidator.isWithinHours(now, campaign.getBusinessHours())) {
                 log.debug("Campaign '{}' is currently outside business hours. Skipping.", campaign.getName());
                 return;
             }
@@ -91,6 +109,7 @@ public class CallDispatcher {
         if (outcome == CallStatus.COMPLETED) {
             log.info("<<< [SUCCESS] Call to {} completed successfully.", record.getPhoneNumber());
             record.setStatus(CallStatus.COMPLETED);
+            successCounter.increment(); // Increment success counter
         } else {
             int currentRetries = record.getRetryCount();
             int maxAllowed = record.getCampaign().getMaxRetries();
@@ -107,6 +126,7 @@ public class CallDispatcher {
                 log.error("XXX [FAILED] Max retries ({}) reached for {}. Marking as FAILED.", 
                           maxAllowed, record.getPhoneNumber());
                 record.setStatus(CallStatus.FAILED);
+                failureCounter.increment();
             }
         }
         callRecordRepository.save(record);

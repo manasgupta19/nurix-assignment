@@ -12,6 +12,14 @@ public class CampaignSummaryResponse {
     private Map<String, Long> statsByStatus;
     private double successRate;
 
+    // --- Explicit Getters for Jackson Serialization ---
+    public Long getCampaignId() { return campaignId; }
+    public String getCampaignName() { return campaignName; }
+    public String getStatus() { return status; }
+    public long getTotalCalls() { return totalCalls; }
+    public Map<String, Long> getStatsByStatus() { return statsByStatus; }
+    public double getSuccessRate() { return successRate; }
+
     // Manual Getters/Setters (Staff-level fail-safe)
     public void setCampaignId(Long id) { this.campaignId = id; }
     public void setCampaignName(String name) { this.campaignName = name; }

@@ -1,14 +1,17 @@
 package com.nurix.campaign.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.nurix.campaign.entity.enums.CampaignStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
+
+import java.time.DayOfWeek;
 import java.util.List;
 
 @Entity
-@Data // Still kept for toString, equals, and hashCode
+@Data
 @Table(name = "campaigns")
 public class Campaign {
     @Id
@@ -29,6 +32,7 @@ public class Campaign {
     @Column(columnDefinition = "jsonb")
     private List<BusinessWindow> businessHours;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CallRecord> calls;
 
@@ -59,17 +63,18 @@ public class Campaign {
      */
     @Data
     public static class BusinessWindow {
-        private String dayOfWeek;
+        @Enumerated(EnumType.STRING)
+        private DayOfWeek dayOfWeek;
         private String startTime;
         private String endTime;
 
         // --- NESTED GETTERS ---
-        public String getDayOfWeek() { return dayOfWeek; }
+        public DayOfWeek getDayOfWeek() { return dayOfWeek; }
         public String getStartTime() { return startTime; }
         public String getEndTime() { return endTime; }
 
         // --- NESTED SETTERS ---
-        public void setDayOfWeek(String dayOfWeek) { this.dayOfWeek = dayOfWeek; }
+        public void setDayOfWeek(DayOfWeek dayOfWeek) { this.dayOfWeek = dayOfWeek; }
         public void setStartTime(String startTime) { this.startTime = startTime; }
         public void setEndTime(String endTime) { this.endTime = endTime; }
     }
