@@ -119,3 +119,5 @@ Run the full test suite to ensure system integrity:
   * **Unit Tests:** Validate business hour logic and mock telephony behavior.
 
 -----
+
+[View Design Documentation](DESIGN.md)
